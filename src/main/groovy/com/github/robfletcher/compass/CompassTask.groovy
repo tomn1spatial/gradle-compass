@@ -36,7 +36,7 @@ class CompassTask extends JRubyExec implements CompassTaskOptions {
   File gemDir
 
   CompassTask() {
-    script = new File("compass")
+    script = new File('compass')
     configuration = CONFIGURATION_NAME
     defaultCharacterEncoding = "UTF-8"
   }
