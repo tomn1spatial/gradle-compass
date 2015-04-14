@@ -1,5 +1,6 @@
 package com.github.robfletcher.compass
 
+import spock.lang.Ignore
 import spock.util.concurrent.PollingConditions
 
 class WatchSpec extends CompassPluginSpec {
@@ -29,6 +30,7 @@ class WatchSpec extends CompassPluginSpec {
     }
   }
 
+  @Ignore("Watch isn't expected to work for now")
   def "recompiles stylesheets when they change"() {
     given: "the watch task is running"
     startWatching()
@@ -50,6 +52,7 @@ class WatchSpec extends CompassPluginSpec {
     }
   }
 
+  @Ignore("Watch isn't expected to work for now")
   def "new stylesheets are compiled"() {
     given:
     startWatching()

@@ -36,7 +36,9 @@ dependencies {
 }
 
 test {
-  systemProperties."compass.gem.dir" = file("${buildDir}/tmp/gems").canonicalPath
+  String gemDir = new File("${buildDir}/tmp/gems").canonicalPath
+  gemDir = gemDir.replace("\\","\\\\")
+  systemProperties."compass.gem.dir" = gemDir
 }
 
 task sourceJar(type: Jar) {
